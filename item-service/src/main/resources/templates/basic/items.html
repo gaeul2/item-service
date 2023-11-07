@@ -37,8 +37,8 @@
                 <tr th:each=" item : ${items}">
                         <!--th:text=""하면 태그안의 text를 덮어줌  -->
                         <!--()하면 변수를 지정해줄수 있음.  -->
-                    <td><a href="item.html" th:href="@{/basic/item/{itemId}(itemId=${item.id})}" th:text="${item.id}">회원id</a></td>
-                    <td><a href="item.html" th:href="@{|/basic/item/${item.id}|}" th:text="${item.itemName}" >상품명</a></td>
+                    <td><a href="item.html" th:href="@{/basic/items/{itemId}(itemId=${item.id})}" th:text="${item.id}">회원id</a></td>
+                    <td><a href="item.html" th:href="@{|/basic/items/${item.id}|}" th:text="${item.itemName}" >상품명</a></td>
                     <td th:text="${item.price}">상품가격</td>
                     <td th:text="${item.quantity}">상품수량</td>
                 </tr>
